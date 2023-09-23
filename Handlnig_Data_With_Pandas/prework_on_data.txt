@@ -1,0 +1,32 @@
+General prework on data
+
+all data in row no columns
+pd.read_csv('movie_titles_metadata.tsv',sep='\t',names=['sno','name','release_year','rating','votes','genres'])
+
+
+Data with id (make it as index)
+pd.read_csv('aug_train.csv',index_col='enrollee_id')
+
+Using specific columns from data
+pd.read_csv('aug_train.csv',usecols=['enrollee_id','gender','education_level'])
+
+Skipping amount of rows from the data
+pd.read_csv('aug_train.csv',nrows=100)
+pd.read_csv('aug_train.csv',skiprows=[0,1,2,3])
+
+
+Encoding not in utf fromat (unicode decode error)
+pd.read_csv('zomato.csv',encoding='latin-1')
+
+Having problem with csv, encoding,unequal in rows and columns (paser erro)
+pd.read_csv('zomato.csv',encoding='latin-1')
+
+
+Changing value types (flaot to int) (column -target)
+pd.read_csv('aug_train.csv',dtype={'target':int})
+
+Handing the date format (object as date to date fromat)
+pd.read_csv('IPL Matches 2008-2020.csv',parse_dates=['date'])
+
+Handling emty or - values in data to (not NaN)
+pd.read_csv('aug_train.csv',na_values=['Male'])
