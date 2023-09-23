@@ -1,0 +1,47 @@
+EXPLORATORY DATA ANYLYSIS  ( Using Plotify Express) 
+
+import plotly.express as px  
+
+fig = px.line(df, x="species", y="petal_width")                                                       #Line Plot
+
+fig = px.bar(df, x="sepal_width", y="sepal_length")                                             #Bar Plot
+
+fig = px.histogram(df, x="sepal_length", y="petal_width")                                 #Histogram
+
+fig = px.scatter(df, x="species", y="petal_width")                                                 #Scatter plot
+
+fig = px.pie(df, values="total_bill", names="day")                                                 #Pie Plot
+
+fig = px.box(df, x="day", y="total_bill")                                                                   #Box Plot
+
+fig = px.strip(df, x="total_bill", y="day")                                                                 #Strip plot
+
+fig = px.violin(df, x="day", y="total_bil                                                                    #Violin Plot
+
+fig = px.funnel(data, x='number', y='stage')                                                           #Funnel plot
+
+fig = px.sunburst(df, path=['column'], values='total_bill')                                   #Sunbrust
+
+fig = px.ecdf(df, x="total_bill")                                                                                  #ECDF
+
+fig = px.density_heatmap(df, x="total_bill", y="tip")                                              #Density Heatmap
+
+fig = px.density_contour(df, x="total_bill", y="tip")                                           #Density Contour
+
+fig = px.scatter_ternary(df, a="Joly", b="Coderre",c="Berg")                           #Scattter Triangle
+
+fig = px.area(df, x="year", y="pop", line_group="country")                              #Area Plot
+
+fig = px.parallel_categories(df)                                                                               #Parallal Cat
+
+fig = px.scatter_matrix(df)                                                                                      #Scatter Matrix
+
+
+3D Plot
+fig = px.scatter_3d(df,x='sepal_length',y='sepal_width',z='petal_width',color='species')
+fig = px.line_3d(df, x="gdpPercap", y="pop", z="year")
+fig = px.scatter_matrix(df,dimensions=["sepal_length","sepal_width"],color='id])
+fig = px.parallel_coordinates(df,dimensions=['sepal_width','sepal_length'],color='id')
+
+
+fig.show()

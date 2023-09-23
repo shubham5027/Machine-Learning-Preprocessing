@@ -1,0 +1,46 @@
+EXPLORATORY DATA ANYLYSIS  ( Using Seaborn) 
+
+import seaborn as sns
+sns.set_theme(style="darkgrid")
+
+#Relational Plot
+sns.relplot(data=tips, x="total_bill", y="tip")
+sns.relplot(data=tips, x="total_bill", y="tip", hue="smoker")
+sns.relplot(data=dowjones, x="Date", y="Price", kind="line")
+
+#Displot
+sns.displot(penguins, x="flipper_length_mm", hue="species")
+sns.displot(penguins, x="flipper_length_mm", kde=False)
+sns.displot(penguins, x="flipper_length_mm", hist=False)    
+sns.displot(penguins, x="flipper_length_mm", kde=False, hist=False, rug=True )
+
+#Jointplot
+sns.jointplot(x="total_bill", y="tip", data=df, kind="reg");
+sns.jointplot(x="total_bill", y="tip", data=df, kind="hex");
+sns.jointplot(x="total_bill", y="tip", data=df, kind="kde");
+
+#Pairplot
+sns.pairplot(df)
+sns.pairplot(penguins,hue='speices')
+
+#Pairgrid
+g = sns.PairGrid(df)
+g.map_upper(sns.histplot)
+g.map_lower(sns.kdeplot, fill=True)
+g.map_diag(sns.histplot, kde=True)
+
+#Catogirical Plot
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="swarm")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="box")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="boxen")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="violin")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="bar")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="count")
+sns.catplot(data=tips, x="day", y="total_bill", hue="smoker", kind="point")
+
+#Linear_Regression_Fit
+sns.regplot(x="total_bill", y="tip", data=tips);
+sns.lmplot(x="total_bill", y="tip", data=tips)
+
+#Heatmap
+sns.heatmap(df, annot=True, fmt="d", linewidths=.5, ax=ax)
