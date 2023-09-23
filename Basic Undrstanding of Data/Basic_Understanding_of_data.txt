@@ -1,0 +1,40 @@
+BASIC UNDERSTANDING OF DATA
+
+
+import pandas as pd
+df = pd.read_csv('train.csv')
+
+#How big is the data?
+len(df)
+df.shape
+df.count()
+df.max()
+df.min()
+df.value_counts()
+
+#How does the data look like?
+df.sample(50)
+df.head()
+df.tail()
+
+#What is the data type of cols?
+df.info()
+
+#are there any missing values?
+df.isnull()
+df.isnull().sum()
+
+#How does the data look mathematically?
+df.describe()
+df.describe(include=object)
+data.mean()
+data.std()
+
+#Are there duplicate values?
+df.duplicated().sum()
+
+#How is the correlation between cols?
+df.corr()
+df.corr()['columnname']
+df.std()
+
