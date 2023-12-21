@@ -75,9 +75,6 @@ Contributions to enhance and expand this repository are welcome! If you have add
 
 Contributions to enhance and expand this repository are welcome! If you have additional preprocessing techniques, optimizations, or examples, feel free to contribute.
 
-## 📄 License
-
-This repository is licensed under the [MIT License](LICENSE).
 
 Feel free to explore, learn, and contribute to make the world of machine learning preprocessing more accessible and effective!
 
